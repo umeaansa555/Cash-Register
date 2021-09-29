@@ -52,8 +52,13 @@ namespace CashRegister
 
             catch
             {
-                outputLabel.Text = $"We can't serve {item1Box.Text} slices.";
+                outputLabel.Text = $"Please enter a value in each field. (can be 0)";
             }
+        }
+
+        private void recieptButton_Click(object sender, EventArgs e)
+        {
+            recieptLabel.Visible = true;
         }
     }
 }

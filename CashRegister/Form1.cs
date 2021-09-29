@@ -15,13 +15,16 @@ namespace CashRegister
         double item1Price = 3.25;
         double item1Count;
 
-        double item2Price;
+        double item2Price = 1.00;
         double item2Count;
 
-        double item3Price;
+        double item3Price = 2.00;
         double item3Count;
 
 
+        double subtotalPrice;
+        double taxRate = 0.13;
+        double taxAmount;
         double totalPrice;
 
 
@@ -35,10 +38,16 @@ namespace CashRegister
             try
             {
                 item1Count = Convert.ToInt32(item1Box.Text);
-                totalPrice = item1Count * item1Price;
+                item2Count = Convert.ToInt32(item2Box.Text);
+                item3Count = Convert.ToInt32(item3Box.Text);
+                subtotalPrice = (item1Count * item1Price) + (item2Count * item2Price) + (item3Count * item3Price);
+                taxAmount = subtotalPrice * taxRate;
+                totalPrice = subtotalPrice + taxAmount;
 
-                outputLabel.Text = $"{totalPrice}";
-                outputLabel.Text = $" The price of {item1Count} slice(s) is {totalPrice.ToString("C")}.";
+
+                outputLabel.Text = $" Subtotal: {subtotalPrice.ToString("C")}.";
+                outputLabel.Text += $" Tax: {taxAmount.ToString("C")}."; 
+                outputLabel.Text += $" Total: {totalPrice.ToString("C")}.";
             }
 
             catch

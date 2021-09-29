@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CashRegister
 {
@@ -67,9 +68,20 @@ namespace CashRegister
         {
             recieptLabel.Visible = true;
             recieptLabel.Text = "Reciept";
+            Refresh();
+            Thread.Sleep(1000);
+
             recieptLabel.Text += $"\n item 1 x{item1Count} {item1Total.ToString("C")}";
+            Refresh();
+            Thread.Sleep(1000);
+
             recieptLabel.Text += $"\n item 2 x{item2Count} {item2Total.ToString("C")}";
+            Refresh();
+            Thread.Sleep(1000);
+
             recieptLabel.Text += $"\n item 3 x{item3Count} {item3Total.ToString("C")}";
+            Refresh();
+            Thread.Sleep(1000);
 
         }
     }

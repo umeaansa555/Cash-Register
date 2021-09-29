@@ -116,12 +116,13 @@ namespace CashRegister
             // 
             // recieptLabel
             // 
+            this.recieptLabel.AutoSize = true;
             this.recieptLabel.BackColor = System.Drawing.Color.White;
             this.recieptLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.recieptLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recieptLabel.Location = new System.Drawing.Point(330, 40);
             this.recieptLabel.Name = "recieptLabel";
-            this.recieptLabel.Size = new System.Drawing.Size(260, 320);
+            this.recieptLabel.Size = new System.Drawing.Size(2, 24);
             this.recieptLabel.TabIndex = 9;
             this.recieptLabel.Visible = false;
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace CashRegister
 {
@@ -66,20 +67,25 @@ namespace CashRegister
 
         private void recieptButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer recieptPlayer = new SoundPlayer(Properties.Resources.recieptsound);
+            recieptPlayer.Play();
             recieptLabel.Visible = true;
             recieptLabel.Text = "Reciept";
             Refresh();
             Thread.Sleep(1000);
 
             recieptLabel.Text += $"\n item 1 x{item1Count} {item1Total.ToString("C")}";
+            recieptPlayer.Play();
             Refresh();
             Thread.Sleep(1000);
 
             recieptLabel.Text += $"\n item 2 x{item2Count} {item2Total.ToString("C")}";
+            recieptPlayer.Play();
             Refresh();
             Thread.Sleep(1000);
 
             recieptLabel.Text += $"\n item 3 x{item3Count} {item3Total.ToString("C")}";
+            recieptPlayer.Play();
             Refresh();
             Thread.Sleep(1000);
 

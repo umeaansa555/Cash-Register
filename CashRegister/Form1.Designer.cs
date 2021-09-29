@@ -123,7 +123,6 @@ namespace CashRegister
             this.recieptLabel.Name = "recieptLabel";
             this.recieptLabel.Size = new System.Drawing.Size(260, 320);
             this.recieptLabel.TabIndex = 9;
-            this.recieptLabel.Text = "Reciept";
             this.recieptLabel.Visible = false;
             // 
             // recieptButton

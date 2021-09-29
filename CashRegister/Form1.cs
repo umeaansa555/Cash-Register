@@ -59,6 +59,13 @@ namespace CashRegister
         private void recieptButton_Click(object sender, EventArgs e)
         {
             recieptLabel.Visible = true;
+            recieptLabel.Text = "Reciept";
+            recieptLabel.Text += $"\n item 1 x{item1Count}";
+
+            Refresh();
+            Thread.Sleep(1000);
+
+
         }
     }
 }

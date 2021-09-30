@@ -40,6 +40,10 @@ namespace CashRegister
             this.recieptLabel = new System.Windows.Forms.Label();
             this.recieptButton = new System.Windows.Forms.Button();
             this.calculateBox = new System.Windows.Forms.CheckBox();
+            this.changeBox = new System.Windows.Forms.TextBox();
+            this.tenderLabel = new System.Windows.Forms.Label();
+            this.changeButton = new System.Windows.Forms.Button();
+            this.changeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // item1Box
@@ -138,7 +142,7 @@ namespace CashRegister
             this.recieptButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.recieptButton.Enabled = false;
             this.recieptButton.ForeColor = System.Drawing.Color.White;
-            this.recieptButton.Location = new System.Drawing.Point(64, 421);
+            this.recieptButton.Location = new System.Drawing.Point(68, 581);
             this.recieptButton.Name = "recieptButton";
             this.recieptButton.Size = new System.Drawing.Size(210, 35);
             this.recieptButton.TabIndex = 10;
@@ -157,14 +161,60 @@ namespace CashRegister
             this.calculateBox.TabIndex = 11;
             this.calculateBox.Text = "calculate total";
             this.calculateBox.UseVisualStyleBackColor = false;
-            this.calculateBox.CheckedChanged += new System.EventHandler(this.calculateBox_CheckedChanged);
+            // 
+            // changeBox
+            // 
+            this.changeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeBox.Location = new System.Drawing.Point(190, 427);
+            this.changeBox.Name = "changeBox";
+            this.changeBox.Size = new System.Drawing.Size(84, 29);
+            this.changeBox.TabIndex = 12;
+            // 
+            // tenderLabel
+            // 
+            this.tenderLabel.AutoSize = true;
+            this.tenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenderLabel.ForeColor = System.Drawing.Color.White;
+            this.tenderLabel.Location = new System.Drawing.Point(64, 430);
+            this.tenderLabel.Name = "tenderLabel";
+            this.tenderLabel.Size = new System.Drawing.Size(94, 24);
+            this.tenderLabel.TabIndex = 13;
+            this.tenderLabel.Text = "Tendered";
+            // 
+            // changeButton
+            // 
+            this.changeButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.changeButton.Enabled = false;
+            this.changeButton.ForeColor = System.Drawing.Color.White;
+            this.changeButton.Location = new System.Drawing.Point(68, 483);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(210, 35);
+            this.changeButton.TabIndex = 14;
+            this.changeButton.Text = "Calculate Change";
+            this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
+            // 
+            // changeLabel
+            // 
+            this.changeLabel.AutoSize = true;
+            this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeLabel.ForeColor = System.Drawing.Color.White;
+            this.changeLabel.Location = new System.Drawing.Point(64, 537);
+            this.changeLabel.Name = "changeLabel";
+            this.changeLabel.Size = new System.Drawing.Size(82, 24);
+            this.changeLabel.TabIndex = 15;
+            this.changeLabel.Text = "Change:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(735, 722);
+            this.ClientSize = new System.Drawing.Size(735, 637);
+            this.Controls.Add(this.changeLabel);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.tenderLabel);
+            this.Controls.Add(this.changeBox);
             this.Controls.Add(this.calculateBox);
             this.Controls.Add(this.recieptButton);
             this.Controls.Add(this.recieptLabel);
@@ -196,6 +246,10 @@ namespace CashRegister
         private System.Windows.Forms.Label recieptLabel;
         private System.Windows.Forms.Button recieptButton;
         private System.Windows.Forms.CheckBox calculateBox;
+        private System.Windows.Forms.TextBox changeBox;
+        private System.Windows.Forms.Label tenderLabel;
+        private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Label changeLabel;
     }
 }
 

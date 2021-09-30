@@ -28,8 +28,11 @@ namespace CashRegister
 
         double subtotalPrice = 0;
         double taxRate = 0.13;
-        double taxAmount = 0 ;
+        double taxAmount = 0;
         double totalPrice = 0;
+
+        double tender = 0;
+        double change = 0;
 
 
         public Form1()
@@ -58,8 +61,8 @@ namespace CashRegister
                 outputLabel.Text += $" Tax: {taxAmount.ToString("C")}."; 
                 outputLabel.Text += $" Total: {totalPrice.ToString("C")}.";
 
-                recieptButton.Enabled = true;
-
+                changeButton.Enabled = true;
+                
             }
 
             catch
@@ -68,8 +71,19 @@ namespace CashRegister
             }
         }
 
+        private void changeButton_Click(object sender, EventArgs e)
+              {
+                tender = Convert.ToDouble(changeBox.Text);
+                change = tender - totalPrice;
+
+            changeLabel.Text += $" {change.ToString("C")}";
+            recieptButton.Enabled = true;
+
+
+        }
         private void recieptButton_Click(object sender, EventArgs e)
         {
+
 
                 SoundPlayer recieptPlayer = new SoundPlayer(Properties.Resources.recieptsound);
                 recieptPlayer.Play();
@@ -93,35 +107,23 @@ namespace CashRegister
                 Refresh();
                 Thread.Sleep(1000);
 
+                recieptLabel.Text += $"\nTender: {tender.ToString("C")}.";
+                recieptPlayer.Play();
+                Refresh();
+                Thread.Sleep(1000);
+
+                recieptLabel.Text += $"\nChange: {change.ToString("C")}.";
+                recieptPlayer.Play();
+                Refresh();
+                Thread.Sleep(1000);
+
+
+
                 recieptLabel.Text += $"\n Thanks for shopping at CashRegister!";
                 recieptPlayer.Play();
                 Refresh();
                 Thread.Sleep(1000);
             
-        }
-
-
-
-
-        private void calculateBox_CheckedChanged(object sender, EventArgs e)
-        {
-            //same as calculateButton, this is just a checkbox version
-            item1Count = Convert.ToInt32(item1Box.Text);
-            item2Count = Convert.ToInt32(item2Box.Text);
-            item3Count = Convert.ToInt32(item3Box.Text);
-
-            item1Total = item1Count * item1Price;
-            item2Total = item2Count * item2Price;
-            item3Total = item3Count * item3Price;
-
-            subtotalPrice = item1Total + item2Total + item3Total;
-            taxAmount = subtotalPrice * taxRate;
-            totalPrice = subtotalPrice + taxAmount;
-
-
-            outputLabel.Text = $"Subtotal: {subtotalPrice.ToString("C")}.";
-            outputLabel.Text += $" Tax: {taxAmount.ToString("C")}.";
-            outputLabel.Text += $" Total: {totalPrice.ToString("C")}.";
         }
     }
 }

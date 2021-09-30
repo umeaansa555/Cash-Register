@@ -39,6 +39,7 @@ namespace CashRegister
             this.item3Box = new System.Windows.Forms.TextBox();
             this.recieptLabel = new System.Windows.Forms.Label();
             this.recieptButton = new System.Windows.Forms.Button();
+            this.calculateBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // item1Box
@@ -135,6 +136,7 @@ namespace CashRegister
             // recieptButton
             // 
             this.recieptButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.recieptButton.Enabled = false;
             this.recieptButton.ForeColor = System.Drawing.Color.White;
             this.recieptButton.Location = new System.Drawing.Point(64, 421);
             this.recieptButton.Name = "recieptButton";
@@ -144,12 +146,26 @@ namespace CashRegister
             this.recieptButton.UseVisualStyleBackColor = false;
             this.recieptButton.Click += new System.EventHandler(this.recieptButton_Click);
             // 
+            // calculateBox
+            // 
+            this.calculateBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.calculateBox.BackColor = System.Drawing.SystemColors.ControlText;
+            this.calculateBox.ForeColor = System.Drawing.Color.White;
+            this.calculateBox.Location = new System.Drawing.Point(320, 217);
+            this.calculateBox.Name = "calculateBox";
+            this.calculateBox.Size = new System.Drawing.Size(186, 39);
+            this.calculateBox.TabIndex = 11;
+            this.calculateBox.Text = "calculate total";
+            this.calculateBox.UseVisualStyleBackColor = false;
+            this.calculateBox.CheckedChanged += new System.EventHandler(this.calculateBox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(735, 508);
+            this.ClientSize = new System.Drawing.Size(735, 722);
+            this.Controls.Add(this.calculateBox);
             this.Controls.Add(this.recieptButton);
             this.Controls.Add(this.recieptLabel);
             this.Controls.Add(this.item3Box);
@@ -179,6 +195,7 @@ namespace CashRegister
         private System.Windows.Forms.TextBox item3Box;
         private System.Windows.Forms.Label recieptLabel;
         private System.Windows.Forms.Button recieptButton;
+        private System.Windows.Forms.CheckBox calculateBox;
     }
 }
 

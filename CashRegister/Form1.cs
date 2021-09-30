@@ -72,13 +72,12 @@ namespace CashRegister
         }
 
         private void changeButton_Click(object sender, EventArgs e)
-              {
-                tender = Convert.ToDouble(changeBox.Text);
-                change = tender - totalPrice;
+        {
+            tender = Convert.ToDouble(changeBox.Text);
+            change = tender - totalPrice;
 
-            changeLabel.Text += $" {change.ToString("C")}";
+            changeLabel.Text = $"Change: {change.ToString("C")}";
             recieptButton.Enabled = true;
-
 
         }
         private void recieptButton_Click(object sender, EventArgs e)
@@ -107,23 +106,38 @@ namespace CashRegister
                 Refresh();
                 Thread.Sleep(1000);
 
-                recieptLabel.Text += $"\nTender: {tender.ToString("C")}.";
+                recieptLabel.Text += $"\n\nSubtotal {subtotalPrice.ToString("C")}";
                 recieptPlayer.Play();
                 Refresh();
                 Thread.Sleep(1000);
 
-                recieptLabel.Text += $"\nChange: {change.ToString("C")}.";
+                recieptLabel.Text += $"\nTotal {totalPrice.ToString("C")}";
+                recieptPlayer.Play();
+                Refresh();
+                Thread.Sleep(1000);
+
+                recieptLabel.Text += $"\n\nTendered {tender.ToString("C")}";
+                recieptPlayer.Play();
+                Refresh();
+                Thread.Sleep(1000);
+
+                recieptLabel.Text += $"\nChange {change.ToString("C")}";
                 recieptPlayer.Play();
                 Refresh();
                 Thread.Sleep(1000);
 
 
 
-                recieptLabel.Text += $"\n Thanks for shopping at CashRegister!";
+                recieptLabel.Text += $"\n\n Thanks for shopping at CashRegister!";
                 recieptPlayer.Play();
                 Refresh();
                 Thread.Sleep(1000);
             
+        }
+
+        private void subtotalLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,21 +15,21 @@ namespace CashRegister
     public partial class Form1 : Form
     {
         double item1Price = 3.25;
-        double item1Count;
-        double item1Total;
+        double item1Count = 0;
+        double item1Total = 0;
 
         double item2Price = 1.00;
-        double item2Count;
-        double item2Total;
+        double item2Count = 0;
+        double item2Total = 0;
 
         double item3Price = 2.00;
-        double item3Count;
-        double item3Total;
+        double item3Count = 0;
+        double item3Total = 0;
 
-        double subtotalPrice;
+        double subtotalPrice = 0;
         double taxRate = 0.13;
-        double taxAmount;
-        double totalPrice;
+        double taxAmount = 0 ;
+        double totalPrice = 0;
 
 
         public Form1()
@@ -57,6 +57,7 @@ namespace CashRegister
                 outputLabel.Text = $"Subtotal: {subtotalPrice.ToString("C")}.";
                 outputLabel.Text += $" Tax: {taxAmount.ToString("C")}."; 
                 outputLabel.Text += $" Total: {totalPrice.ToString("C")}.";
+
             }
 
             catch
@@ -89,6 +90,10 @@ namespace CashRegister
             Refresh();
             Thread.Sleep(1000);
 
+            recieptLabel.Text += $"\n Thanks for shopping at CashRegister!";
+            recieptPlayer.Play();
+            Refresh();
+            Thread.Sleep(1000);
         }
     }
 }

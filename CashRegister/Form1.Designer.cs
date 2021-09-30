@@ -52,16 +52,18 @@ namespace CashRegister
             // outputLabel
             // 
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.ForeColor = System.Drawing.Color.White;
             this.outputLabel.Location = new System.Drawing.Point(64, 275);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(210, 132);
             this.outputLabel.TabIndex = 1;
-            this.outputLabel.Text = "Output label";
+            this.outputLabel.Text = "Enter desired item quantity.";
             // 
             // item1Label
             // 
             this.item1Label.AutoSize = true;
             this.item1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item1Label.ForeColor = System.Drawing.Color.White;
             this.item1Label.Location = new System.Drawing.Point(60, 53);
             this.item1Label.Name = "item1Label";
             this.item1Label.Size = new System.Drawing.Size(60, 24);
@@ -70,12 +72,14 @@ namespace CashRegister
             // 
             // calculateTotalButton
             // 
+            this.calculateTotalButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.calculateTotalButton.ForeColor = System.Drawing.Color.White;
             this.calculateTotalButton.Location = new System.Drawing.Point(64, 217);
             this.calculateTotalButton.Name = "calculateTotalButton";
             this.calculateTotalButton.Size = new System.Drawing.Size(210, 35);
             this.calculateTotalButton.TabIndex = 3;
             this.calculateTotalButton.Text = "Calculate Total";
-            this.calculateTotalButton.UseVisualStyleBackColor = true;
+            this.calculateTotalButton.UseVisualStyleBackColor = false;
             this.calculateTotalButton.Click += new System.EventHandler(this.calculateTotalButton_Click);
             // 
             // item2Box
@@ -90,6 +94,7 @@ namespace CashRegister
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(60, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 24);
@@ -100,6 +105,7 @@ namespace CashRegister
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(60, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -128,18 +134,21 @@ namespace CashRegister
             // 
             // recieptButton
             // 
+            this.recieptButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.recieptButton.ForeColor = System.Drawing.Color.White;
             this.recieptButton.Location = new System.Drawing.Point(64, 421);
             this.recieptButton.Name = "recieptButton";
             this.recieptButton.Size = new System.Drawing.Size(210, 35);
             this.recieptButton.TabIndex = 10;
             this.recieptButton.Text = "Print Reciept";
-            this.recieptButton.UseVisualStyleBackColor = true;
+            this.recieptButton.UseVisualStyleBackColor = false;
             this.recieptButton.Click += new System.EventHandler(this.recieptButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(735, 508);
             this.Controls.Add(this.recieptButton);
             this.Controls.Add(this.recieptLabel);

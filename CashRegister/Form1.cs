@@ -57,9 +57,9 @@ namespace CashRegister
                 totalPrice = subtotalPrice + taxAmount;
 
 
-                outputLabel.Text = $"Subtotal: {subtotalPrice.ToString("C")}.";
-                outputLabel.Text += $" Tax: {taxAmount.ToString("C")}."; 
-                outputLabel.Text += $" Total: {totalPrice.ToString("C")}.";
+                subtotalLabel.Text = $"Subtotal: {subtotalPrice.ToString("C")}.";
+                taxLabel.Text = $" Tax: {taxAmount.ToString("C")}."; 
+                totalLabel.Text = $" Total: {totalPrice.ToString("C")}.";
 
                 changeButton.Enabled = true;
                 

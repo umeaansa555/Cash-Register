@@ -85,5 +85,8 @@
   <ItemGroup>
     <None Include="Resources\25421__andrewweathers__receipt.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spamton_screenshot_shop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

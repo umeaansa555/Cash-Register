@@ -68,5 +68,15 @@ namespace CashRegister.Properties {
                 return ResourceManager.GetStream("recieptsound", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spamton_screenshot_shop {
+            get {
+                object obj = ResourceManager.GetObject("Spamton_screenshot_shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

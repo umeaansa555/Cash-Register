@@ -46,6 +46,8 @@ namespace CashRegister
             this.subtotalLabel = new System.Windows.Forms.Label();
             this.taxLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // item1Box
@@ -60,9 +62,9 @@ namespace CashRegister
             // 
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.Color.White;
-            this.outputLabel.Location = new System.Drawing.Point(64, 275);
+            this.outputLabel.Location = new System.Drawing.Point(515, 202);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(210, 50);
+            this.outputLabel.Size = new System.Drawing.Size(277, 67);
             this.outputLabel.TabIndex = 1;
             this.outputLabel.Text = "Enter desired item quantity.";
             // 
@@ -146,7 +148,7 @@ namespace CashRegister
             this.recieptButton.Enabled = false;
             this.recieptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recieptButton.ForeColor = System.Drawing.Color.White;
-            this.recieptButton.Location = new System.Drawing.Point(334, 521);
+            this.recieptButton.Location = new System.Drawing.Point(68, 503);
             this.recieptButton.Name = "recieptButton";
             this.recieptButton.Size = new System.Drawing.Size(210, 35);
             this.recieptButton.TabIndex = 10;
@@ -157,7 +159,7 @@ namespace CashRegister
             // changeBox
             // 
             this.changeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeBox.Location = new System.Drawing.Point(456, 367);
+            this.changeBox.Location = new System.Drawing.Point(190, 349);
             this.changeBox.Name = "changeBox";
             this.changeBox.Size = new System.Drawing.Size(84, 20);
             this.changeBox.TabIndex = 12;
@@ -167,7 +169,7 @@ namespace CashRegister
             this.tenderLabel.AutoSize = true;
             this.tenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenderLabel.ForeColor = System.Drawing.Color.White;
-            this.tenderLabel.Location = new System.Drawing.Point(330, 370);
+            this.tenderLabel.Location = new System.Drawing.Point(64, 352);
             this.tenderLabel.Name = "tenderLabel";
             this.tenderLabel.Size = new System.Drawing.Size(53, 13);
             this.tenderLabel.TabIndex = 13;
@@ -179,7 +181,7 @@ namespace CashRegister
             this.changeButton.Enabled = false;
             this.changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeButton.ForeColor = System.Drawing.Color.White;
-            this.changeButton.Location = new System.Drawing.Point(334, 423);
+            this.changeButton.Location = new System.Drawing.Point(68, 405);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(210, 35);
             this.changeButton.TabIndex = 14;
@@ -192,7 +194,7 @@ namespace CashRegister
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeLabel.ForeColor = System.Drawing.Color.White;
-            this.changeLabel.Location = new System.Drawing.Point(330, 477);
+            this.changeLabel.Location = new System.Drawing.Point(64, 459);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(47, 13);
             this.changeLabel.TabIndex = 15;
@@ -203,7 +205,7 @@ namespace CashRegister
             this.subtotalLabel.AutoSize = true;
             this.subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalLabel.ForeColor = System.Drawing.Color.White;
-            this.subtotalLabel.Location = new System.Drawing.Point(64, 352);
+            this.subtotalLabel.Location = new System.Drawing.Point(61, 268);
             this.subtotalLabel.Name = "subtotalLabel";
             this.subtotalLabel.Size = new System.Drawing.Size(46, 13);
             this.subtotalLabel.TabIndex = 16;
@@ -214,7 +216,7 @@ namespace CashRegister
             this.taxLabel.AutoSize = true;
             this.taxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxLabel.ForeColor = System.Drawing.Color.White;
-            this.taxLabel.Location = new System.Drawing.Point(64, 391);
+            this.taxLabel.Location = new System.Drawing.Point(61, 290);
             this.taxLabel.Name = "taxLabel";
             this.taxLabel.Size = new System.Drawing.Size(25, 13);
             this.taxLabel.TabIndex = 18;
@@ -225,18 +227,29 @@ namespace CashRegister
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.ForeColor = System.Drawing.Color.White;
-            this.totalLabel.Location = new System.Drawing.Point(64, 423);
+            this.totalLabel.Location = new System.Drawing.Point(61, 315);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(31, 13);
             this.totalLabel.TabIndex = 19;
             this.totalLabel.Text = "Total";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CashRegister.Properties.Resources.Spamton_screenshot_shop;
+            this.pictureBox1.Location = new System.Drawing.Point(518, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(274, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(604, 599);
+            this.ClientSize = new System.Drawing.Size(817, 599);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.taxLabel);
             this.Controls.Add(this.subtotalLabel);
@@ -256,6 +269,7 @@ namespace CashRegister
             this.Controls.Add(this.item1Box);
             this.Name = "Form1";
             this.Text = "Cash Register";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,6 +294,7 @@ namespace CashRegister
         private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

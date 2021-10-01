@@ -44,6 +44,7 @@ namespace CashRegister
             songPlayer.URL = "Deltarune Chapter 2 OST - 41 - Dialtone.mp3";
             songPlayer.settings.autoStart = true;
             songPlayer.settings.setMode("loop", true);
+            songPlayer.settings.volume = 5;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -93,7 +94,7 @@ namespace CashRegister
         }
         private void recieptButton_Click(object sender, EventArgs e)
         {
-
+            
 
                 SoundPlayer recieptPlayer = new SoundPlayer(Properties.Resources.recieptsound);
                 recieptPlayer.Play();

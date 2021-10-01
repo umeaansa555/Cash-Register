@@ -111,7 +111,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Deltarune Chapter 2 OST - 41 - Dialtone.mp3" />
+    <None Include="Resources\Deltarune Chapter 2 OST - 41 - Dialtone.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Deltarune Chapter 2 OST - 41 - Dialtone.mp3" />

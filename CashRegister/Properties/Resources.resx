@@ -117,12 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Deltarune_Chapter_2_OST___41___Dialtone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Deltarune Chapter 2 OST - 41 - Dialtone.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dialtone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deltarune Chapter 2 OST - 41 - Dialtone.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="recieptsound" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAAOQTAgDkEwIAAAEAAQoPAgAAAOQTAgACUklGRtwTAgBXQVZFZm10IBAAAAAB
+        AQEBCQIAAAAAAAAA5BMCAOQTAgDkEwIAAAEAAQoPAgAAAOQTAgACUklGRtwTAgBXQVZFZm10IBAAAAAB
         AAIARKwAABCxAgAEABAAZGF0YbgTAgDI/vT+yf75/sj+FP/E/gn/tP4V/8T+FP/E/ur+yf4F/9T+BP/q
         /gr/O/8l/xr/Cv/U/vX+mv4F/6v+Bf/L/hb/Vv4l/2X+C//b/vv++/71/ub+C//M/vb+Nv8G/1b/Fv+2
         /vv+bP4G/3z+/P6G/hb/HP4W/639p/0I/kL+p/68/kf/8f7G/5f+bP+C/n3+1/4I/kv/nf48/wf/ov6N
@@ -2395,7 +2402,6 @@
         //L+Cw==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Spamton_screenshot_shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spamton_screenshot_shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

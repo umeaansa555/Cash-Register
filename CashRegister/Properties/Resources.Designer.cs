@@ -61,6 +61,25 @@ namespace CashRegister.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Deltarune_Chapter_2_OST___41___Dialtone {
+            get {
+                object obj = ResourceManager.GetObject("Deltarune_Chapter_2_OST___41___Dialtone", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream dialtone {
+            get {
+                return ResourceManager.GetStream("dialtone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream recieptsound {

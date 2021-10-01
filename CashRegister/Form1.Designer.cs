@@ -269,6 +269,7 @@ namespace CashRegister
             this.Controls.Add(this.item1Box);
             this.Name = "Form1";
             this.Text = "Cash Register";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

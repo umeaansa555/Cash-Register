@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+using WMPLib;
 
 namespace CashRegister
 {
@@ -34,10 +35,20 @@ namespace CashRegister
         double tender = 0;
         double change = 0;
 
+        WindowsMediaPlayer songPlayer = new WindowsMediaPlayer();
 
         public Form1()
         {
             InitializeComponent();
+
+            songPlayer.URL = "Deltarune Chapter 2 OST - 41 - Dialtone.mp3";
+            songPlayer.settings.autoStart = true;
+            songPlayer.settings.setMode("loop", true);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            songPlayer.controls.play();
         }
 
         private void calculateTotalButton_Click(object sender, EventArgs e)
@@ -139,5 +150,7 @@ namespace CashRegister
         {
 
         }
+
+        
     }
 }

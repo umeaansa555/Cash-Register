@@ -118,5 +118,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Deltarune Chapter 2 OST - 41 - Dialtone.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatcow-Farm-Fresh-Phone-vintage.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,6 +50,7 @@ namespace CashRegister
         private void Form1_Load(object sender, EventArgs e)
         {
             songPlayer.controls.play();
+            outputLabel.Text = "Welcome to [SHOP]";
         }
 
         private void calculateTotalButton_Click(object sender, EventArgs e)
@@ -79,7 +80,8 @@ namespace CashRegister
 
             catch
             {
-                outputLabel.Text = $"Please enter a value in each field. (can be 0)";
+                outputLabel.Text = $"VALID NUMBERs ONLY [ Buster] !";
+                //outputLabel.Text = $"Please enter a value in each field. (can be 0)";
             }
         }
 
@@ -94,7 +96,7 @@ namespace CashRegister
         }
         private void recieptButton_Click(object sender, EventArgs e)
         {
-            
+            outputLabel.Text = "TRANSACTION COMPLETE  Thanks bu ddy";
 
                 SoundPlayer recieptPlayer = new SoundPlayer(Properties.Resources.recieptsound);
                 recieptPlayer.Play();
@@ -140,7 +142,7 @@ namespace CashRegister
 
 
 
-                recieptLabel.Text += $"\n\n Thanks for shopping at CashRegister!";
+                recieptLabel.Text += $"\n\n Thanks for [shopping] at CashRegister!";
                 recieptPlayer.Play();
                 Refresh();
                 Thread.Sleep(1000);
